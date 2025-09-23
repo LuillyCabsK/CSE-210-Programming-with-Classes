@@ -1,39 +1,39 @@
 #include "Entry.h"
 #include <iostream>
 
-// Constructor vacío - como una hoja en blanco
+// Default constructor - creates empty entry (like a blank sheet)
 Entry::Entry() {
     date = "";
     prompt = "";
     response = "";
 }
 
-// Constructor con datos - como llenar la hoja
+// Parameterized constructor - creates entry with data provided
 Entry::Entry(std::string entryDate, std::string entryPrompt, std::string entryResponse) {
     date = entryDate;
     prompt = entryPrompt;
     response = entryResponse;
 }
 
-// Obtener la fecha
+// date
 std::string Entry::getDate() {
     return date;
 }
 
-// Obtener la pregunta
+// possible question prompt
 std::string Entry::getPrompt() {
     return prompt;
 }
 
-// Obtener la respuesta
+// get a answer from user
 std::string Entry::getResponse() {
     return response;
 }
 
-// Mostrar la entrada bonita
+// Display formatted entry to the console
 void Entry::displayEntry() {
     std::cout << "\n=== " << date << " ===" << std::endl;
-    std::cout << "Pregunta: " << prompt << std::endl;
-    std::cout << "Respuesta: " << response << std::endl;
+    std::cout << "Prompt: " << prompt << std::endl;
+    std::cout << "Response: " << response << std::endl;
     std::cout << "=====================" << std::endl;
 }

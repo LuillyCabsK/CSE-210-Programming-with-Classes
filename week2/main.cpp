@@ -1,134 +1,135 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <fstream>
-#include <ctime>
-#include "Entry.h"
+#include <iostream>      // to use std::cout, std::cin, std::endl
+#include <vector> // to use std::vector
+#include <string> // to use std::string 
+#include <fstream> // work with files
+#include <cstdlib>   // For rand() and srand()
+#include <ctime>     // obtain current time for seeding random
+#include "Entry.h"    // include the Entry class definition
 
 using namespace std;  // Para no escribir std:: todo el tiempo
 
-// Función para mostrar el menú principal
+// Function to display main menu
 void displayMenu() {
-    cout << "\n=== MI DIARIO PERSONAL ===" << endl;
-    cout << "1. Escribir nueva entrada" << endl;
-    cout << "2. Mostrar todas las entradas" << endl;
-    cout << "3. Guardar diario en archivo" << endl;
-    cout << "4. Cargar diario desde archivo" << endl;
-    cout << "5. Salir" << endl;
-    cout << "Selecciona una opción (1-5): ";
+    cout << "\n=== MY PERSONAL 'Diary' JOURNAL ===" << endl;
+    cout << "1. Write new entry" << endl;
+    cout << "2. Display all entries" << endl;
+    cout << "3. Save journal to file" << endl;
+    cout << "4. Load journal from file" << endl;
+    cout << "5. Exit" << endl;
+    cout << "Select an option (1-5): ";
 }
 
-// Función para obtener la fecha actual como string
+// funtion to get current date as string
 string getCurrentDate() {
     time_t now = time(0);
     tm* timeinfo = localtime(&now);
     
-    // Formato: DD/MM/AAAA
+    // Format date: Day/Month/Year
     char buffer[11];
     strftime(buffer, sizeof(buffer), "%d/%m/%Y", timeinfo);
     return string(buffer);
 }
 
-// Función para obtener un prompt aleatorio
+// function to get a random prompt from predefined list
 string getRandomPrompt() {
-    // Lista de prompts/preguntas para el diario
+    // list of prompts/questions 
     vector<string> prompts = {
-        "¿Quién fue la persona más interesante con la que interactué hoy?",
-        "¿Cuál fue la mejor parte de mi día?",
-        "¿Cómo vi la mano del Señor en mi vida hoy?",
-        "¿Cuál fue la emoción más fuerte que sentí hoy?",
-        "Si tuviera algo que pudiera hacer hoy, ¿qué sería?",
-        "¿Qué aprendí hoy?",
-        "¿Por qué estoy agradecido hoy?"
+        "Who was the most interesting person I interacted with today?",
+        "What was the best part of my day?",
+        "How did I see the hand of the Lord in my life today?",
+        "What was the strongest emotion I felt today?",
+        "If I had one thing I could do over today, what would it be?",
+        "What did I learn today?",
+        "What am I grateful for today?"
     };
     
-    // Generar número aleatorio entre 0 y tamaño de la lista - 1
+    // Generate random number between 0 and list size - 1
     int randomIndex = rand() % prompts.size();
     return prompts[randomIndex];
 }
 
-// Función para escribir nueva entrada
+// new entry function
 void writeNewEntry(vector<Entry>& journal) {
-    cout << "\n--- NUEVA ENTRADA ---" << endl;
+    cout << "\n--- NEW ENTRY ---" << endl;
     
-    // Obtener fecha actual y prompt aleatorio
+    // obtain current date and random prompt
     string currentDate = getCurrentDate();
     string randomPrompt = getRandomPrompt();
     
-    // Mostrar el prompt al usuario
+    // show prompt to user
     cout << randomPrompt << endl;
-    cout << "Escribe tu respuesta: ";
+    cout << "Write your response: ";
     
-    // Leer la respuesta del usuario
+    // read user response
     string userResponse;
-    cin.ignore(); // Limpiar el buffer del teclado
+    cin.ignore(); // clean the input buffer
     getline(cin, userResponse);
     
-    // Crear nueva entrada y agregarla al diario
+    // create new Entry object and add to journal
     Entry newEntry(currentDate, randomPrompt, userResponse);
     journal.push_back(newEntry);
     
-    cout << "¡Entrada guardada exitosamente!" << endl;
+    cout << "Entry saved successfully!" << endl;
 }
 
-// Función para mostrar todas las entradas
+// display all entries function
 void displayJournal(const vector<Entry>& journal) {
     if (journal.empty()) {
-        cout << "\nEl diario está vacío. ¡Escribe tu primera entrada!" << endl;
+        cout << "\nThe journal is empty. Write your first entry!" << endl;
         return;
     }
     
-    cout << "\n--- TODAS LAS ENTRADAS DEL DIARIO ---" << endl;
+    cout << "\n--- ALL JOURNAL ENTRIES ---" << endl;
     for (int i = 0; i < journal.size(); i++) {
         cout << "\nEntrada #" << (i + 1) << ":" << endl;
         journal[i].displayEntry();
     }
 }
 
-// Función para guardar el diario en un archivo
+// save journal to file function
 void saveJournalToFile(const vector<Entry>& journal) {
     if (journal.empty()) {
-        cout << "\nNo hay entradas para guardar." << endl;
+        cout << "\nNo entries to save." << endl;
         return;
     }
     
-    cout << "\nIngresa el nombre del archivo para guardar (ej: midiario.txt): ";
-    string filename;
-    cin >> filename;
+    cout << "\nEnter filename to save (ex: myjournal.txt): or as you prefer to name it! ";
+    string filename; 
+    cin >> filename; 
     
-    // Abrir archivo para escribir
+    // open file to write
     ofstream outputFile(filename);
     
     if (outputFile.is_open()) {
-        // Escribir cada entrada en el archivo separado por |
+        // write each entry in the file as | delimited
         for (const Entry& entry : journal) {
             outputFile << entry.getDate() << "|" 
                       << entry.getPrompt() << "|" 
                       << entry.getResponse() << endl;
         }
         outputFile.close();
-        cout << "Diario guardado en '" << filename << "' exitosamente!" << endl;
+        cout << "Journal saved to '" << filename << "' successfully!" << endl;
     } else {
-        cout << "Error: No se pudo crear el archivo." << endl;
+        cout << "Error: Could not create the file." << endl;
     }
 }
 
-// Función para cargar diario desde archivo
+// function to load journal from file
 void loadJournalFromFile(vector<Entry>& journal) {
     cout << "\nIngresa el nombre del archivo para cargar (ej: midiario.txt): ";
     string filename;
     cin >> filename;
     
-    // Abrir archivo para leer
+    // open file to read
     ifstream inputFile(filename);
     
     if (inputFile.is_open()) {
-        // Limpiar el diario actual antes de cargar
+        // clear current journal
         journal.clear();
         
         string line;
         while (getline(inputFile, line)) {
-            // Separar la línea usando | como delimitador
+            // write each entry in the file as | delimited
             size_t pos1 = line.find('|');
             size_t pos2 = line.find('|', pos1 + 1);
             
@@ -137,27 +138,27 @@ void loadJournalFromFile(vector<Entry>& journal) {
                 string prompt = line.substr(pos1 + 1, pos2 - pos1 - 1);
                 string response = line.substr(pos2 + 1);
                 
-                // Crear nueva entrada y agregarla al diario
+                // create Entry object and add to journal
                 Entry newEntry(date, prompt, response);
                 journal.push_back(newEntry);
             }
         }
         inputFile.close();
-        cout << "Diario cargado desde '" << filename << "' exitosamente!" << endl;
+        cout << "Journal loaded from  '" << filename << "' successfully!" << endl;
     } else {
-        cout << "Error: No se pudo abrir el archivo." << endl;
+        cout << "Error: Could not open the file" << endl;
     }
 }
 
-// Función principal
+// main function
 int main() {
-    vector<Entry> journal;  // Vector para almacenar todas las entradas
+    vector<Entry> journal;  // vector to store journal entries
     int choice;
     
-    // Semilla para números aleatorios
+    // random number generator
     srand(time(0));
     
-    cout << "¡Bienvenido a tu Diario Personal!" << endl;
+    cout << "Welcome to your Personal Journal!" << endl;
     
     do {
         displayMenu();
@@ -177,10 +178,10 @@ int main() {
                 loadJournalFromFile(journal);
                 break;
             case 5:
-                cout << "\n¡Gracias por usar tu diario! Hasta pronto." << endl;
+                cout << "\nThanks for using this app to save your memories! see you tomorrow" << endl;
                 break;
             default:
-                cout << "\nOpción inválida. Intenta de nuevo." << endl;
+                cout << "\nInvalid option. Please try again." << endl;
         }
         
     } while (choice != 5);

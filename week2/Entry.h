@@ -5,21 +5,21 @@
 
 class Entry {
 private:
-    std::string date;        // Fecha de la entrada
-    std::string prompt;      // Pregunta del día
-    std::string response;    // Respuesta del usuario
+    std::string date;        // Entry date
+    std::string prompt;      // dayli question prompt
+    std::string response;    // user's response
 
 public:
-    // Constructores (como "moldes" para crear entradas)
+    // Constructors (like "molds" to create entries) for Entry objects
     Entry();
     Entry(std::string entryDate, std::string entryPrompt, std::string entryResponse);
     
-    // Métodos para obtener datos
+    //  Methods for obtaining data from the entry
     std::string getDate();
     std::string getPrompt();
     std::string getResponse();
     
-    // Método para mostrar la entrada
+    // Method to display the input nicely
     void displayEntry();
 };
 

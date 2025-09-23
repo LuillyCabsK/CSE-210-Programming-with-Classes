@@ -6,3 +6,4 @@ this code is coding by: Lcabs (sergio Luilly Cabrera Dorado)
 This is the starter code or not?
 
 wEEK1 EXERCISE HAS BEEN REALIZED
+week2 has been created v2
