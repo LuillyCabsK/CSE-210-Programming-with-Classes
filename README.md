@@ -5,7 +5,11 @@ this code is coding by: Lcabs (sergio Luilly Cabrera Dorado)
 
 This is the starter code or not?
 
-wEEK1 EXERCISE HAS BEEN REALIZED
-week2 has been created v2
-week 3 ;(
-week 4 has been uploaded
+wEEK1 EXERCISE HAS BEEN REALIZED 
+
+week2 has been created v2 
+
+week 3 ;(  
+
+week 4 has been uploaded 
+
