@@ -9,7 +9,7 @@ wEEK1 EXERCISE HAS BEEN REALIZED
 
 week2 has been created v2 
 
-week 3 ;(  
+week 3 upload latter
 
 week 4 has been uploaded 
 
