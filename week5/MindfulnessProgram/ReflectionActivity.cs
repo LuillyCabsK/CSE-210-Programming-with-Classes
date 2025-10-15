@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class ReflectionActivity : Activity
 {
     private List<string> _prompts = new List<string>
@@ -45,11 +48,17 @@ public class ReflectionActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
 
+        Console.Clear();
+
         while (DateTime.Now < endTime)
         {
             string question = _questions[random.Next(_questions.Count)];
-            Console.Write($"\n\n{question} ");
-            ShowSpinner(10);
+            Console.Write($"\n{question} ");
+            ShowSpinner(8);
+            
+            // Check if we've exceeded the time
+            if (DateTime.Now >= endTime)
+                break;
         }
 
         DisplayEndingMessage();

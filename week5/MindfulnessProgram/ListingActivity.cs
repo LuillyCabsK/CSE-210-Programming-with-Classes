@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class ListingActivity : Activity
 {
     private List<string> _prompts = new List<string>
@@ -8,6 +11,8 @@ public class ListingActivity : Activity
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"
     };
+
+    private int _count;
 
     public ListingActivity() : base(
         "Listing",
@@ -44,7 +49,8 @@ public class ListingActivity : Activity
             }
         }
 
-        Console.WriteLine($"\nYou listed {items.Count} items!");
+        _count = items.Count;
+        Console.WriteLine($"\nYou listed {_count} items!");
 
         DisplayEndingMessage();
     }

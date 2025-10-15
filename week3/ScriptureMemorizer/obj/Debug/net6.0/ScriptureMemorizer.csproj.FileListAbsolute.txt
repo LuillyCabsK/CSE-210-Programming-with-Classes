@@ -1,0 +1,15 @@
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\bin\Debug\net6.0\ScriptureMemorizer.exe
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\bin\Debug\net6.0\ScriptureMemorizer.deps.json
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\bin\Debug\net6.0\ScriptureMemorizer.runtimeconfig.json
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\bin\Debug\net6.0\ScriptureMemorizer.dll
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\bin\Debug\net6.0\ScriptureMemorizer.pdb
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.GeneratedMSBuildEditorConfig.editorconfig
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.AssemblyInfoInputs.cache
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.AssemblyInfo.cs
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.csproj.CoreCompileInputs.cache
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.sourcelink.json
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.dll
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\refint\ScriptureMemorizer.dll
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.pdb
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.genruntimeconfig.cache
+D:\BYU\CSE-210-Programming-with-Classes\week3\ScriptureMemorizer\obj\Debug\net6.0\ref\ScriptureMemorizer.dll
