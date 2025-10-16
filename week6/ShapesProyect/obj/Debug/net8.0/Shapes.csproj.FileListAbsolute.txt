@@ -1,0 +1,15 @@
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\bin\Debug\net8.0\Shapes.exe
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\bin\Debug\net8.0\Shapes.deps.json
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\bin\Debug\net8.0\Shapes.runtimeconfig.json
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\bin\Debug\net8.0\Shapes.dll
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\bin\Debug\net8.0\Shapes.pdb
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.GeneratedMSBuildEditorConfig.editorconfig
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.AssemblyInfoInputs.cache
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.AssemblyInfo.cs
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.csproj.CoreCompileInputs.cache
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.sourcelink.json
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.dll
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\refint\Shapes.dll
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.pdb
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\Shapes.genruntimeconfig.cache
+d:\BYU\CSE-210-Programming-with-Classes\week6\initialActivity\obj\Debug\net8.0\ref\Shapes.dll
